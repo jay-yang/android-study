@@ -4,6 +4,19 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <RelativeLayout
+        android:id="@+id/layout01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <gone.pe.kr.samplebitmapwidget.TitleButton
+            android:id="@+id/titleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="4dp"
+            />
+
+
+    </RelativeLayout>
 
 
 </LinearLayout>
