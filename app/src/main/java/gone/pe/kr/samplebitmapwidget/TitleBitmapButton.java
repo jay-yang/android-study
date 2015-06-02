@@ -258,4 +258,5 @@ public class TitleBitmapButton extends Button {
     public void setBitmapPadding(int bitmapPadding) {
         this.bitmapPadding = bitmapPadding;
     }
+
 }
