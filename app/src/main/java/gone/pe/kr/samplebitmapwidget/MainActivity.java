@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 
 
@@ -17,9 +18,9 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //¾×¼Ç¹Ù¿¡ ´ëÇÑ ÄÁÆ®·Ñ¸¦ ¾ò´Â´Ù.
-        //getSupportActionBar()´Â ÀÌÀü ¹öÀü±îÁöµµ ÀÛµ¿ÇÏ°Ô ¸¸µé±â À§ÇÔ.
-        //getActionBar()µµ ÀÖÀ½
+        //ï¿½×¼Ç¹Ù¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½Ñ¸ï¿½ ï¿½ï¿½Â´ï¿½.
+        //getSupportActionBar()ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ûµï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+        //getActionBar()ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         getSupportActionBar().hide();
 
         TitleBitmapButton arrowLeftBtn = (TitleBitmapButton)findViewById(R.id.arrowLeftBtn);
@@ -31,6 +32,20 @@ public class MainActivity extends ActionBarActivity {
         Bitmap clickedBitmap = drawable1.getBitmap();
 
         arrowLeftBtn.setIconBitmap(normalBitmap, clickedBitmap);
+
+
+        arrowLeftBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        String titleText = "ë¹„íŠ¸ë§µ Title";
+
+        TitleButton titleBtn = (TitleButton)findViewById(R.id.titleBtn);
+        titleBtn.setTitleText(titleText);
+        titleBtn.setDefaultSize(180F);
 
     }
 
